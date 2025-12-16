@@ -147,15 +147,17 @@ for overlap in overlaps:
     # 计算实际的重叠内容
     actual_overlaps = []
     for i in range(len(chunks) - 1):
-        # 简单检查：看第i+1块的开头是否在第i块中出现
-        chunk1_end = chunks[i][-100:]
-        chunk2_start = chunks[i+1][:100]
+        # 检查块2的开头部分是否在块1中出现
+        chunk2_start = chunks[i+1][:overlap+50]  # 多取一些以确保能找到
+        chunk1 = chunks[i]
         
-        # 找最长公共子串（简化版）
+        # 从长到短尝试找到最长的公共部分
         common_len = 0
-        for j in range(min(len(chunk1_end), len(chunk2_start))):
-            if chunk1_end[-(j+1):] == chunk2_start[:j+1]:
-                common_len = j + 1
+        for length in range(min(len(chunk2_start), overlap+50), 0, -1):
+            test_str = chunk2_start[:length]
+            if test_str in chunk1:
+                common_len = length
+                break
         
         actual_overlaps.append(common_len)
     

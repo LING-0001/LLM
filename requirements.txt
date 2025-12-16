@@ -24,6 +24,7 @@ langchain>=0.1.0             # RAG框架（可选）
 numpy>=1.24.0
 pandas>=2.0.0
 tqdm>=4.65.0
+psutil>=5.9.0               # 性能监控
 
 # 可选：Web界面（最终项目）
 # gradio>=4.0.0
