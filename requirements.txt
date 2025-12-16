@@ -1,0 +1,31 @@
+# ============================================
+# MyLLM 项目依赖
+# ============================================
+
+# 阶段0 & 1: 基础推理
+llama-cpp-python>=0.2.0
+
+# 阶段2: RAG相关
+chromadb>=0.4.0              # 向量数据库
+sentence-transformers>=2.2.0  # 文本向量化
+pypdf>=3.0.0                 # PDF处理
+langchain-text-splitters>=0.0.1  # 智能文本切块
+langchain>=0.1.0             # RAG框架（可选）
+
+# 阶段3: 微调相关（后续安装）
+# torch>=2.0.0
+# transformers>=4.36.0
+# peft>=0.7.0                # LoRA微调
+# datasets>=2.15.0           # 数据集处理
+# trl>=0.7.0                 # RLHF训练
+# bitsandbytes>=0.41.0       # 量化训练
+
+# 工具库
+numpy>=1.24.0
+pandas>=2.0.0
+tqdm>=4.65.0
+
+# 可选：Web界面（最终项目）
+# gradio>=4.0.0
+# streamlit>=1.28.0
+

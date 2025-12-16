@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# 模型文件（太大，不上传）
+*.gguf
+*.bin
+*.safetensors
+*.pth
+models/
+
+# 数据文件
+data/documents/*.pdf
+data/documents/*.txt
+data/finetune/
+*.json
+*.csv
+
+# ChromaDB
+chroma_db/
+*.sqlite3
+
+# 临时文件
+*.log
+*.tmp
+sample_document.md
+chunks_output.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Conda
+.conda/
